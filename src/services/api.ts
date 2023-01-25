@@ -1,3 +1,4 @@
+import { signOut } from '@/contexts/AuthContext'
 import axios, { AxiosError } from 'axios'
 import { parseCookies, setCookie } from 'nookies'
 
@@ -88,7 +89,10 @@ api.interceptors.response.use(
         })
       } else {
         // desloga usuario
+        signOut()
       }
     }
+
+    return Promise.reject(error)
   },
 )
