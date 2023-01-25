@@ -44,8 +44,6 @@ export function setupAPIClient(
           if (!isRefreshing) {
             isRefreshing = true
 
-            console.log('REFRESH')
-
             api
               .post('/refresh', {
                 refreshToken,
