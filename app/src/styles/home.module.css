@@ -1,8 +1,25 @@
 .container {
   display: flex;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
-  align-items: center;
   height: 100vh;
+  width: max-content;
   flex-direction: column;
+}
+
+.input {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 6px;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 6px;
 }

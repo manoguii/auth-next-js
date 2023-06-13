@@ -23,16 +23,20 @@ export default function Home() {
   return (
     <form onSubmit={handleSubmit} className={styles.container}>
       <input
+        className={styles.input}
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
+        className={styles.input}
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button type="submit">Entrar</button>
+      <button className={styles.button} type="submit">
+        Entrar
+      </button>
     </form>
   )
 }
