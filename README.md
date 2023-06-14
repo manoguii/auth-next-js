@@ -1,6 +1,6 @@
 # Auth next js
 
-O projeto auth-next-js implementa todo fluxo de autenticação usando `JWT` para realizar login do usuário com email e senha, nesse projeto é feito o refresh do token do usuário toda vez que o token expira usando o conceito de fila, é usado o conceito de `SSR` do next para validar as rotas que o usuário pode acessar, o projeto usa a api que se encontra na pasta `api` que tem algumas rotas para fazer a implementação da autenticação no front end, veja abaixo um pouco mais sobre o fluxo do app.
+O projeto auth-next-js implementa todo fluxo de autenticação usando `JWT` para realizar login do usuário com email e senha, nesse projeto é feito o refresh do token do usuário toda vez que o token expira usando o conceito de fila, é usado funcionalidade de `SSR` do next para fazer o refresh do token pelo servidor e validar as rotas que o usuário pode acessar, o projeto usa a api que se encontra na pasta `api` que tem algumas rotas para fazer a implementação da autenticação no front end, veja abaixo um pouco mais sobre o fluxo do app.
 
 ## Fluxo
 
@@ -26,7 +26,6 @@ if (error.response?.status === 401) {
 const data = error.response.data as ExtendsErrorData
 
 if (data.code === 'token.expired') {
-  // renova o token
   cookies = parseCookies(ctx)
 
   const { 'nextAuth.refreshToken': refreshToken } = cookies
@@ -104,25 +103,18 @@ if (data.code === 'token.expired') {
 
 ## Inicialização
 
-```bash
-// Clone o repositório
+```zsh title="Clone o repositório"
 git clone git@github.com:manoguii/auth-next-js.git
 ```
 
-```bash
-// Acesse a pasta api
+```zsh title="Acesse a pasta api, Instale as dependências e Inicie o servidor"
 cd api
-// Instale as dependências
 pnpm install
-// Inicie o servidor
 pnpm dev
 ```
 
-```bash
-// Acesse a pasta app
+```zsh title="Acesse a pasta app, Instale as dependências e Inicie o app"
 cd app
-// Instale as dependências
 pnpm install
-// Inicie o app
 pnpm dev
 ```
