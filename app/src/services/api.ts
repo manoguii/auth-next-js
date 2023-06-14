@@ -33,8 +33,6 @@ export function setupAPIClient(
         const data = error.response.data as ExtendsErrorData
 
         if (data.code === 'token.expired') {
-          // renova o token
-
           cookies = parseCookies(ctx)
 
           const { 'nextAuth.refreshToken': refreshToken } = cookies
@@ -43,6 +41,8 @@ export function setupAPIClient(
 
           if (!isRefreshing) {
             isRefreshing = true
+
+            console.log('refresh 🌊')
 
             api
               .post('/refresh', {
