@@ -1,6 +1,6 @@
 # Auth next js
 
-O projeto auth-next-js implementa todo fluxo de autenticação usando `JWT` para realizar login do usuário com email e senha, nesse projeto é feito o refresh do token do usuário toda vez que o token expira usando o conceito de fila, é usado funcionalidade de `SSR` do next para fazer o refresh do token pelo servidor e validar as rotas que o usuário pode acessar, o projeto usa a api que se encontra na pasta `api` que tem algumas rotas para fazer a implementação da autenticação no front end, veja abaixo um pouco mais sobre o fluxo do app.
+O projeto auth-next-js implementa todo fluxo de autenticação usando `JWT` para realizar login do usuário com email e senha, nesse projeto é feito o refresh do token do usuário toda vez que o token expira usando o conceito de fila, é usado funcionalidade de `SSR` do next para fazer o refresh do token pelo servidor, validar se o usuário tem permissão para acessar determinada rota ou ate mesmo um determinado componente, o projeto usa a api que se encontra na pasta `api` que tem algumas rotas para fazer a implementação da autenticação no front end, veja abaixo um pouco mais sobre o fluxo do app.
 
 ## Fluxo
 
@@ -130,10 +130,14 @@ pnpm dev
 ```js
 {
   email: 'guilhermedavidrk@gmail.com',
-  password: '123456'
+  password: '123456',
+  permissions: ['users.list', 'users.create', 'metrics.list'],
+  roles: ['administrator']
 },
 {
   email: 'estagiario@gmail.com',
-  password: '123456'
+  password: '123456',
+  permissions: ['products.list'],
+  roles: ['editor']
 },
 ```

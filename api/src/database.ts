@@ -14,7 +14,7 @@ export function seedUserStore() {
 
   users.set('estagiario@gmail.com', {
     password: '123456',
-    permissions: ['users.list', 'metrics.list'],
+    permissions: ['products.list'],
     roles: ['editor']
   })
 }
