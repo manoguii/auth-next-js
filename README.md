@@ -103,18 +103,37 @@ if (data.code === 'token.expired') {
 
 ## Inicialização
 
-```zsh title="Clone o repositório"
+- Clone o repositório
+
+```zsh
 git clone git@github.com:manoguii/auth-next-js.git
 ```
 
-```zsh title="Acesse a pasta api, Instale as dependências e Inicie o servidor"
+- Acesse a pasta api, Instale as dependências e Inicie o servidor
+
+```zsh
 cd api
 pnpm install
 pnpm dev
 ```
 
-```zsh title="Acesse a pasta app, Instale as dependências e Inicie o app"
+- Acesse a pasta app, Instale as dependências e Inicie o app
+
+```zsh
 cd app
 pnpm install
 pnpm dev
+```
+
+## Usuários para teste
+
+```js
+{
+  email: 'guilhermedavidrk@gmail.com',
+  password: '123456'
+},
+{
+  email: 'estagiario@gmail.com',
+  password: '123456'
+},
 ```
