@@ -101,29 +101,16 @@ if (data.code === 'token.expired') {
 }
 ```
 
-## Inicialização
-
-- Clone o repositório
+## Instalação
 
 ```zsh
-git clone git@github.com:manoguii/auth-next-js.git
+git clone git clone git@github.com:manoguii/auth-next-js.git
 ```
 
-- Acesse a pasta api, Instale as dependências e Inicie o servidor
-
-```zsh
-cd api
-pnpm install
-pnpm dev
-```
-
-- Acesse a pasta app, Instale as dependências e Inicie o app
-
-```zsh
-cd app
-pnpm install
-pnpm dev
-```
+- Para rodar o projeto localmente
+  1. Instale as dependências ```pnpm install```
+  2. Execute a aplicação. ```pnpm dev```
+  3. Acesse `http://localhost:3000`
 
 ## Usuários para teste
 
@@ -141,3 +128,15 @@ pnpm dev
   roles: ['editor']
 },
 ```
+
+## Tecnologias utilizadas
+
+Algumas tecnologias utilizadas para construção da aplicação.
+
+- [ReactJS](https://reactjs.org/)
+- [NextJS](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+<center>Made with 💙 by Guilherme David</center>
